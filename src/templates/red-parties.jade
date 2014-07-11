@@ -1,0 +1,55 @@
+table
+  thead
+    tr
+      th(colspan="2")
+      th(colspan="2") pct.
+      th
+      th(colspan="2") man.
+  tbody
+    tr
+      td
+        img(src="img/a_small.png" alt="{{poll.result.A.name}}")
+      td {{poll.result.A.name}}
+      td.bold {{poll.result.A.percent | number:1}}
+      td {{poll.result.A.percentDeff.replace(".", ",")}}
+      td
+        i(class="fa fa-arrow-circle-down" ng-show="poll.result.A.percentDeff < 0")
+        i(class="fa fa-arrow-circle-up" ng-show="poll.result.A.percentDeff > 0")
+      td.bold {{poll.result.A.mandates}}
+      td {{poll.result.A.mandatesDeff}}
+    tr
+      td
+        img(src="img/b_small.png" alt="{{poll.result.B.name}}")
+      td {{poll.result.B.name}}
+      td.bold {{poll.result.B.percent | number:1}}
+      td {{poll.result.B.percentDeff.replace(".", ",")}}
+      td
+        i(class="fa fa-arrow-circle-down" ng-show="poll.result.B.percentDeff < 0")
+        i(class="fa fa-arrow-circle-up" ng-show="poll.result.B.percentDeff > 0")
+      td.bold {{poll.result.B.mandates}}
+      td {{poll.result.B.mandatesDeff}}
+    tr
+      td
+        img(src="img/f_small.png" alt="{{poll.result.F.name}}")
+      td {{poll.result.F.name}}
+      td.bold {{poll.result.F.percent | number:1}}
+      td {{poll.result.F.percentDeff.replace(".", ",")}}
+      td
+        i(class="fa fa-arrow-circle-down" ng-show="poll.result.F.percentDeff < 0")
+        i(class="fa fa-arrow-circle-up" ng-show="poll.result.F.percentDeff > 0")
+      td.bold {{poll.result.F.mandates}}
+      td {{poll.result.F.mandatesDeff}}
+    tr
+      td
+        img(src="img/ø_small.png" alt="{{poll.result['Ø'].name}}")
+      td {{poll.result['Ø'].name}}
+      td.bold {{poll.result['Ø'].percent | number:1}}
+      td {{poll.result['Ø'].percentDeff.replace(".", ",")}}
+      td
+        i(class="fa fa-arrow-circle-down" ng-show="poll.result['Ø'].percentDeff < 0")
+        i(class="fa fa-arrow-circle-up" ng-show="poll.result['Ø'].percentDeff > 0")
+      td.bold {{poll.result['Ø'].mandates}}
+      td {{poll.result['Ø'].mandatesDeff}}
+    tr
+      td
+      td.help(colspan="6") Ændring i forhold til gårsdagens måling

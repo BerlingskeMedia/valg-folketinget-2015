@@ -1,0 +1,6 @@
+strong Tvivlere
+.graf
+  .red-block(ng-style="{'width': poll.result.total.red.percent - (poll.result.doubters / 2) + '%'}")
+  .doubter-block(ng-style="{'width': poll.result.doubters + poll.result.total.rest + '%'}")
+  .blue-block(ng-style="{'width': poll.result.total.blue.percent - (poll.result.doubters / 2) + '%'}")
+p {{poll.result.doubters | number:1}}%

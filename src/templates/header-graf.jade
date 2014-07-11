@@ -1,0 +1,7 @@
+.red-block(ng-style="{'width': poll.result.total.red.percent + (poll.result.total.rest / 2) + '%'}")
+  p {{poll.result.total.red.percent | number:1}}%
+.blue-block(ng-style="{'width': poll.result.total.blue.percent + (poll.result.total.rest / 2) + '%'}")
+  p {{poll.result.total.blue.percent | number:1}}%
+p.poll-title(ng-mouseover="showDate = true" ng-mouseleave="showDate = false") Dagens Gallup
+.poll-date(ng-show="showDate") {{poll.result.datetime | date}}
+.half-way

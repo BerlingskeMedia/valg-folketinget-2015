@@ -1,0 +1,18 @@
+doctype html
+html(lang="en" ng-app="app" ng-csp)
+head
+  meta(charset="UTF-8")
+  title Valresultat 2014
+  link(rel="stylesheet", href="bower_components/fontawesome/css/font-awesome.css")
+  link(rel="stylesheet", href="styles.min.css")
+body
+  app-container(ng-controller="PollController as poll")
+    header-graf
+    red-total
+    red-parties
+    doubter-graf
+    blue-parties
+    blue-total
+  script(src="bower_components/angular/angular.js")
+  script(src="bower_components/x2js/xml2json.js")
+  script(src="scripts.min.js")

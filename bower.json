@@ -1,0 +1,14 @@
+{
+  "name": "danish-election-2014",
+  "version": "0.0.0",
+  "authors": [
+    "tcarlsen <thomascarlsen86@gmail.com>"
+  ],
+  "description": "a banner for b.dk to display the election results",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.2.19",
+    "x2js": "*",
+    "fontawesome": "~4.1.0"
+  }
+}

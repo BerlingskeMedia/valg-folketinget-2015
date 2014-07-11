@@ -1,0 +1,63 @@
+table
+  thead
+    tr
+      th(colspan="2")
+      th(colspan="2") pct.
+      th
+      th(colspan="2") man.
+  tbody
+    tr
+      td
+        img(src="img/c_small.png" alt="{{poll.result.C.name}}")
+      td {{poll.result.C.name}}
+      td.bold {{poll.result.C.percent | number:1}}
+      td {{poll.result.C.percentDeff.replace(".", ",")}}
+      td
+        i(class="fa fa-arrow-circle-down" ng-show="poll.result.C.percentDeff < 0")
+        i(class="fa fa-arrow-circle-up" ng-show="poll.result.C.percentDeff > 0")
+      td.bold {{poll.result.C.mandates}}
+      td {{poll.result.C.mandatesDeff}}
+    tr
+      td
+        img(src="img/i_small.png" alt="{{poll.result.I.name}}")
+      td {{poll.result.I.name}}
+      td.bold {{poll.result.I.percent | number:1}}
+      td {{poll.result.I.percentDeff.replace(".", ",")}}
+      td
+        i(class="fa fa-arrow-circle-down" ng-show="poll.result.I.percentDeff < 0")
+        i(class="fa fa-arrow-circle-up" ng-show="poll.result.I.percentDeff > 0")
+      td.bold {{poll.result.I.mandates}}
+      td {{poll.result.I.mandatesDeff}}
+    tr
+      td
+        img(src="img/k_small.png" alt="{{poll.result.K.name}}")
+      td {{poll.result.K.name}}
+      td.bold {{poll.result.K.percent | number:1}}
+      td {{poll.result.K.percentDeff.replace(".", ",")}}
+      td
+        i(class="fa fa-arrow-circle-down" ng-show="poll.result.K.percentDeff < 0")
+        i(class="fa fa-arrow-circle-up" ng-show="poll.result.K.percentDeff > 0")
+      td.bold {{poll.result.K.mandates}}
+      td {{poll.result.K.mandatesDeff}}
+    tr
+      td
+        img(src="img/o_small.png" alt="{{poll.result.O.name}}")
+      td {{poll.result.O.name}}
+      td.bold {{poll.result.O.percent | number:1}}
+      td {{poll.result.O.percentDeff.replace(".", ",")}}
+      td
+        i(class="fa fa-arrow-circle-down" ng-show="poll.result.O.percentDeff < 0")
+        i(class="fa fa-arrow-circle-up" ng-show="poll.result.O.percentDeff > 0")
+      td.bold {{poll.result.O.mandates}}
+      td {{poll.result.O.mandatesDeff}}
+    tr
+      td
+        img(src="img/v_small.png" alt="{{poll.result.V.name}}")
+      td {{poll.result.V.name}}
+      td.bold {{poll.result.V.percent | number:1}}
+      td {{poll.result.V.percentDeff.replace(".", ",")}}
+      td
+        i(class="fa fa-arrow-circle-down" ng-show="poll.result.V.percentDeff < 0")
+        i(class="fa fa-arrow-circle-up" ng-show="poll.result.V.percentDeff > 0")
+      td.bold {{poll.result.V.mandates}}
+      td {{poll.result.V.mandatesDeff}}

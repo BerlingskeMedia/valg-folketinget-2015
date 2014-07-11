@@ -1,0 +1,220 @@
+$red: #BB252D;
+$blue: #044973;
+$grey: #ddd;
+
+body {
+  width: 940px;
+  margin: 20px auto;
+  font-family: "Berlingske Sans Regular";
+  font-size: 12px;
+}
+
+app-container {
+  position: relative;
+  width: 940px;
+  display: block;
+}
+
+header-graf {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  display: block;
+  color: #fff;
+  font-family: "Berlingske Sans Extra Bold";
+  font-size: 14px;
+
+  p.poll-title {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    z-index: 10;
+    margin: 0;
+  }
+
+  .poll-date {
+    position: absolute;
+    top: 6px;
+    left: 110px;
+    z-index: 10;
+  }
+
+  .half-way {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    margin-left: -1px;
+    width: 2px;
+    height: 10px;
+    background-color: #000;
+    z-index: 20;
+  }
+
+  .red-block,
+  .blue-block {
+    p {
+      margin: 6px 12px;
+      word-spacing: 20px;
+    }
+  }
+
+  .red-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    text-align: right;
+    background-color: $red;
+  }
+
+  .blue-block {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: $blue;
+  }
+}
+
+doubter-graf {
+  position: absolute;
+  top: 56px;
+  left: 50%;
+  width: 90px;
+  margin-left: -45px;
+  text-align: center;
+
+  strong {
+    font-family: "Berlingske Sans Extra Bold";
+    font-size: 14px;
+  }
+
+  p {
+    margin: 10px;
+    font-size: 18px;
+  }
+
+  .graf {
+    width: 65px;
+    height: 11px;
+    margin: 5px auto;
+
+    .red-block {
+      float: left;
+      height: 100%;
+      background-color: $red;
+    }
+
+    .doubter-block {
+      float: left;
+      height: 100%;
+      background-color: $grey;
+    }
+
+    .blue-block {
+      float: left;
+      height: 100%;
+      background-color: $blue;
+    }
+  }
+}
+
+red-total,
+blue-total {
+  position: absolute;
+  top: 56px;
+  text-align: center;
+
+  h1 {
+    font-family: "Berlingske Sans Extra Bold";
+    font-size: 50px;
+    line-height: 40px;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
+red-total {
+  left: 0;
+}
+
+blue-total {
+  right: 0;
+}
+
+red-parties,
+blue-parties {
+  position: absolute;
+  top: 35px;
+
+  table {
+    margin: 0 10px;
+
+    td.help {
+      text-align: left !important;
+      font-style: italic;
+    }
+
+    th {
+      text-align: center;
+    }
+
+    td:nth-child(1) {
+      width: 30px;
+      text-align: center;
+
+      img {
+        height: 17px;
+      }
+    }
+
+    td:nth-child(2) {
+      width: 130px;
+      white-space: nowrap;
+    }
+
+    td:nth-child(3),
+    td:nth-child(4) {
+      text-align: right;
+    }
+
+    td:nth-child(5) {
+      width: 50px;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    td:nth-child(6),
+    td:nth-child(7) {
+      text-align: right;
+    }
+  }
+}
+
+red-parties {
+  left: 70px;
+}
+
+blue-parties {
+  right: 70px;
+}
+
+.ng-hide {
+  display: none;
+}
+
+.bold {
+  font-family: "Berlingske Sans Extra Bold";
+}
+
+.fa-arrow-circle-down {
+  color: #903;
+}
+
+.fa-arrow-circle-up {
+  color: #01804f;
+}
