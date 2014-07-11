@@ -1,0 +1,65 @@
+/* m.b.dk runs 320px */
+@media (max-width: 320px) {
+  app-container {
+    width: 320px !important;
+  }
+
+  header-graf {
+    margin-top: 30px;
+    height: 60px;
+
+    p.poll-title {
+      top: -25px;
+      color: #000;
+    }
+
+    .poll-date {
+      top: -25px;
+      left: auto;
+      right: 6px;
+      color: #000;
+      display: block !important;
+    }
+
+    .red-block,
+    .blue-block {
+      p {
+        margin: 18px 12px !important;
+        font-size: 20px !important;
+      }
+    }
+
+    .half-way {
+      top: 50px;
+      margin-left: -2px;
+      width: 4px;
+      height: 15px;
+    }
+  }
+
+  red-total,
+  blue-total {
+    position: absolute;
+    top: 65px;
+
+    p {
+      margin-top: 5px;
+    }
+  }
+
+  red-total {
+    left: 6px;
+  }
+
+  blue-total {
+    right: 6px;
+  }
+
+  doubter-graf {
+    top: 65px;
+  }
+
+  table {
+    display: none;
+  }
+}
