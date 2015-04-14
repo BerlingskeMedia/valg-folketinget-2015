@@ -52,4 +52,15 @@ table
       td {{poll.result['Ø'].mandatesDeff}}
     tr
       td
+        img(src="img/å_small.png" alt="{{poll.result['Å'].name}}")
+      td {{poll.result['Å'].name}}
+      td.bold {{poll.result['Å'].percent | number:1}}
+      td {{poll.result['Å'].percentDeff.replace(".", ",")}}
+      td
+        i(class="fa fa-arrow-circle-down" ng-show="poll.result['Å'].percentDeff < 0")
+        i(class="fa fa-arrow-circle-up" ng-show="poll.result['Å'].percentDeff > 0")
+      td.bold {{poll.result['Å'].mandates}}
+      td {{poll.result['Å'].mandatesDeff}}
+    tr
+      td
       td.help(colspan="6") Ændring i forhold til gårsdagens måling
