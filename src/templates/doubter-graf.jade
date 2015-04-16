@@ -3,5 +3,6 @@ strong Tvivlere
   .red-block(ng-style="{'width': poll.result.total.red.percent - (poll.result.doubters / 2) + '%'}")
   .doubter-block(ng-style="{'width': poll.result.doubters + poll.result.total.rest + '%'}")
   .blue-block(ng-style="{'width': poll.result.total.blue.percent - (poll.result.doubters / 2) + '%'}")
-p {{poll.result.doubters | number:1}}%
+p.procent {{poll.result.doubters | number:1}}%
 a.poll-link(href="http://www.b.dk/berlingskebarometer" target="_blank") Se vægtet gennemsnit
+p.help +/- ift. forrige måling
