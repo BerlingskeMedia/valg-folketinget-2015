@@ -28,6 +28,7 @@ app.controller "PollController", ($scope, $http) ->
       poll.result[entry.party.letter].mandates = entry.mandates
 
       poll.result[entry.party.letter].name = "De Konservative" if entry.party.name is "Det Konservative Folkeparti"
+      poll.result[entry.party.letter].name = "De Radikale" if entry.party.name is "Det Radikale Venstre"
 
       if parseInt(entry.supports) is 9 or parseInt(entry.supports) is 1
         poll.result.total.red.percent += parseFloat(entry.percent)
