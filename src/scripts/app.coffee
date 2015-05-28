@@ -18,7 +18,7 @@ app.controller "PollController", ($scope, $http) ->
   ).success (data) ->
     latestPoll = data.result.polls.poll[0]
     lastPoll = data.result.polls.poll[1]
-    poll.result.datetime = new Date(latestPoll.datetime.replace(" ", "T"))
+    poll.result.updated = new Date(latestPoll.updated.replace(" ", "T"))
     poll.result.doubters = latestPoll.doubters
 
     for entry in latestPoll.entries.entry
