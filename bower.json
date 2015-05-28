@@ -7,8 +7,8 @@
   "description": "a banner for b.dk to display the election results",
   "private": true,
   "dependencies": {
-    "angular": "~1.2.19",
     "x2js": "*",
-    "fontawesome": "~4.1.0"
+    "fontawesome": "~4.1.0",
+    "angular": "~1.4.0"
   }
 }
