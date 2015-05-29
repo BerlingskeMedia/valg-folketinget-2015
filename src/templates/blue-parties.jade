@@ -11,7 +11,7 @@ table
         img(src="img/c_small.png" alt="{{poll.result.C.name}}")
       td {{poll.result.C.name}}
       td.bold {{poll.result.C.percent | number:1}}
-      td {{poll.result.C.percentDeff.replace(".", ",")}}
+      td {{poll.result.C.percentDeff | number:1}}
       td
         i(class="fa fa-arrow-circle-down" ng-show="poll.result.C.percentDeff < 0")
         i(class="fa fa-arrow-circle-up" ng-show="poll.result.C.percentDeff > 0")
@@ -22,7 +22,7 @@ table
         img(src="img/i_small.png" alt="{{poll.result.I.name}}")
       td {{poll.result.I.name}}
       td.bold {{poll.result.I.percent | number:1}}
-      td {{poll.result.I.percentDeff.replace(".", ",")}}
+      td {{poll.result.I.percentDeff | number:1}}
       td
         i(class="fa fa-arrow-circle-down" ng-show="poll.result.I.percentDeff < 0")
         i(class="fa fa-arrow-circle-up" ng-show="poll.result.I.percentDeff > 0")
@@ -33,7 +33,7 @@ table
         img(src="img/k_small.png" alt="{{poll.result.K.name}}")
       td {{poll.result.K.name}}
       td.bold {{poll.result.K.percent | number:1}}
-      td {{poll.result.K.percentDeff.replace(".", ",")}}
+      td {{poll.result.K.percentDeff | number:1}}
       td
         i(class="fa fa-arrow-circle-down" ng-show="poll.result.K.percentDeff < 0")
         i(class="fa fa-arrow-circle-up" ng-show="poll.result.K.percentDeff > 0")
@@ -44,7 +44,7 @@ table
         img(src="img/o_small.png" alt="{{poll.result.O.name}}")
       td {{poll.result.O.name}}
       td.bold {{poll.result.O.percent | number:1}}
-      td {{poll.result.O.percentDeff.replace(".", ",")}}
+      td {{poll.result.O.percentDeff | number:1}}
       td
         i(class="fa fa-arrow-circle-down" ng-show="poll.result.O.percentDeff < 0")
         i(class="fa fa-arrow-circle-up" ng-show="poll.result.O.percentDeff > 0")
@@ -55,7 +55,7 @@ table
         img(src="img/v_small.png" alt="{{poll.result.V.name}}")
       td {{poll.result.V.name}}
       td.bold {{poll.result.V.percent | number:1}}
-      td {{poll.result.V.percentDeff.replace(".", ",")}}
+      td {{poll.result.V.percentDeff | number:1}}
       td
         i(class="fa fa-arrow-circle-down" ng-show="poll.result.V.percentDeff < 0")
         i(class="fa fa-arrow-circle-up" ng-show="poll.result.V.percentDeff > 0")
