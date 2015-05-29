@@ -10,6 +10,34 @@ app.controller "PollController", ($scope, $http) ->
       blue:
         percent: 0
         mandates: 0
+  lastElection =
+    V:
+      percent: "26.7"
+      mandates: "47"
+    A:
+      percent: "24.8"
+      mandates: "44"
+    "Ø":
+      percent: "6.7"
+      mandates: "12"
+    B:
+      percent: "9.5"
+      mandates: "17"
+    C:
+      percent: "4.9"
+      mandates: "8"
+    F:
+      percent: "9.2"
+      mandates: "16"
+    I:
+      percent: "5.0"
+      mandates: "9"
+    K:
+      percent: "0.8"
+      mandates: "0"
+    O:
+      percent: "12.3"
+      mandates: "22"
 
   $http.get("gallup.xml",
     transformResponse: (data) ->
@@ -39,16 +67,15 @@ app.controller "PollController", ($scope, $http) ->
 
     poll.result.total.rest = 100 - (poll.result.total.red.percent + poll.result.total.blue.percent)
 
-    for entry in lastPoll.entries.entry
-      poll.result[entry.party.letter].percentDeff = (poll.result[entry.party.letter].percent - entry.percent).toFixed(1)
-      poll.result[entry.party.letter].mandatesDeff = (poll.result[entry.party.letter].mandates - entry.mandates).toFixed(0)
+    for key, value of lastElection
+      poll.result[key].percentDeff = (poll.result[key].percent - value.percent).toFixed(1)
+      poll.result[key].mandatesDeff = (poll.result[key].mandates - value.mandates).toFixed(0)
 
-      if poll.result[entry.party.letter].percentDeff > 0
-        poll.result[entry.party.letter].percentDeff = "+" + poll.result[entry.party.letter].percentDeff
+      if poll.result[key].percentDeff > 0
+        poll.result[key].percentDeff = "+" + poll.result[key].percentDeff
 
-      if poll.result[entry.party.letter].mandatesDeff > 0
-        poll.result[entry.party.letter].mandatesDeff = "+" + poll.result[entry.party.letter].mandatesDeff
-
+      if poll.result[key].mandatesDeff > 0
+        poll.result[key].mandatesDeff = "+" + poll.result[key].mandatesDeff
   true
 
 app.directive "headerGraf", () ->
