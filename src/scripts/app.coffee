@@ -71,11 +71,6 @@ app.controller "PollController", ($scope, $http) ->
       poll.result[key].percentDeff = (poll.result[key].percent - value.percent).toFixed(1)
       poll.result[key].mandatesDeff = (poll.result[key].mandates - value.mandates).toFixed(0)
 
-      if poll.result[key].percentDeff > 0
-        poll.result[key].percentDeff = "+" + poll.result[key].percentDeff
-
-      if poll.result[key].mandatesDeff > 0
-        poll.result[key].mandatesDeff = "+" + poll.result[key].mandatesDeff
   true
 
 app.directive "headerGraf", () ->
